@@ -1,5 +1,5 @@
 # JavaScript (by dream-ellie)
 
-### JavaScript-study
+### JavaScript-basic
 ---
 ### JavaScript-project
