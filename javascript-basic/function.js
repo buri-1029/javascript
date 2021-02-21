@@ -19,25 +19,27 @@ function printHello() {
   }
   log('Hello@');
   log(1234);
-  
+   
+  // Js -> Ts 배우기
+
   // 2. Parameters
-  // premitive parameters: passed by value
+  // primitive parameters: passed by value
   // object parameters: passed by reference
   function changeName(obj) {
     obj.name = 'coder';
   }
-  const ellie = { name: 'ellie' };
-  changeName(ellie);
-  console.log(ellie);
+  const buhee = { name: 'buhee' };
+  changeName(buhee);
+  console.log(buhee); // 'buhee' -> 'coder'로 변경
   
   // 3. Default parameters (added in ES6)
   function showMessage(message, from = 'unknown') {
     console.log(`${message} by ${from}`);
   }
-  showMessage('Hi!');
+  showMessage('Hi!'); // 매개변수가 하나여도, default 값 추가 해놓으면
   
   // 4. Rest parameters (added in ES6)
-  function printAll(...args) {
+  function printAll(...args) { // ... -> 배열 형태로 전달
     for (let i = 0; i < args.length; i++) {
       console.log(args[i]);
     }
@@ -51,10 +53,10 @@ function printHello() {
   printAll('dream', 'coding', 'ellie');
   
   // 5. Local scope
-  let globalMessage = 'global'; // global variable
+  let globalMessage = 'global'; // global variable (전역)
   function printMessage() {
     let message = 'hello';
-    console.log(message); // local variable
+    console.log(message); // local variable (지역)
     console.log(globalMessage);
     function printAnother() {
       console.log(message);
@@ -79,7 +81,7 @@ function printHello() {
     }
   }
   
-  // good
+  // good : 더 맞는 경우를 리턴하는 것이 좋다. 
   function upgradeUser(user) {
     if (user.point <= 10) {
       return;
@@ -93,7 +95,7 @@ function printHello() {
   // can be passed as an argument to other functions.
   // can be returned by another function
   
-  // 1. Function expression
+  // 1. Function expression --> 이부분 다시 
   // a function declaration can be called earlier than it is defiend. (hoisted)
   // a function expression is created when the execution reaches it.
   const print = function () {
@@ -125,10 +127,11 @@ function printHello() {
   const printNo = function print() {
     console.log('no!');
   };
+
   randomQuiz('wrong', printYes, printNo);
   randomQuiz('love you', printYes, printNo);
   
-  // Arrow function
+  // Arrow function =>
   // always anonymous
   // const simplePrint = function () {
   //   console.log('simplePrint!');
@@ -166,4 +169,6 @@ function printHello() {
         throw Error('unkonwn command');
     }
   }
-  console.log(calculate('add', 2, 3));
+  console.log(calculate('add', 7, 3));
+  console.log(calculate('substract', 5, 2));
+  console.log(calculate('multiply', 4, 6));
