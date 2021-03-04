@@ -1,13 +1,12 @@
 'use strict';
 // Object-oriendted programming
 // class
-//  - template(틀) / declare once / no data in 
+//  - template(틀) / declare once / no data in
 // object
 //  - instance of a class / created many times / data in
 // JavaScript classes
 //  - introduced in ES6
 //  - syntactical sugar over prototype-based inheritance
-
 
 // 1. Class declarations
 class Person {
@@ -29,7 +28,6 @@ console.log(buhee.name);
 console.log(buhee.age);
 buhee.speak();
 
-
 // 2. Getter and setters
 class User {
   constructor(firstName, lastName, age) {
@@ -44,15 +42,14 @@ class User {
 
   set age(value) {
     this._age = value < 0 ? 0 : value;
-    // this.age = value; -> call stack 
+    // this.age = value; -> call stack
   }
 }
 
-// age를 실수로 -1 -> 객체지향적인 개념으로 봤을때 말이 안됨 
+// age를 실수로 -1 -> 객체지향적인 개념으로 봤을때 말이 안됨
 // 방어적인 자세로 만들 수 있도록 해주는 것이 getter와 setter
 const user1 = new User('Kim', 'Buhee', -1);
 console.log(user1.age);
-
 
 // 3. Fields (public, private)
 // Too soon!
@@ -62,16 +59,15 @@ class Experiment {
   #privateField = 0;
 }
 const experiment = new Experiment();
-console.log(experiment.publicField);  // 2
+console.log(experiment.publicField); // 2
 console.log(experiment.privateField); // undefined
-
 
 // 4. Static properties and methods
 // Too soon!
 class Article {
   // 이 'static'은 object마다 할당되어지는 것이 아니라
-  // class 자체에 붙어있는 것!! 
-  // -> object에 상관없이 공통적으로 class에서 사용하는 거라면 유용 
+  // class 자체에 붙어있는 것!!
+  // -> object에 상관없이 공통적으로 class에서 사용하는 거라면 유용
   static publisher = 'Dream Coding';
   constructor(articleNumber) {
     this.articleNumber = articleNumber;
@@ -84,10 +80,9 @@ class Article {
 
 const article1 = new Article(1);
 const article2 = new Article(2);
-console.log(article1.publisher);  // undefined
-console.log(Article.publisher);   // Dream Coding
-Article.printPublisher();         // Dream Coding
-
+console.log(article1.publisher); // undefined
+console.log(Article.publisher); // Dream Coding
+Article.printPublisher(); // Dream Coding
 
 // 5. Inheritance (상속 & 다형성)
 // a way for one class to extend another class.
@@ -129,17 +124,16 @@ rectangle.draw(); // drawing blue color!
 console.log(rectangle.getArea()); // 400
 
 const triangle = new Triangle(20, 20, 'red');
-triangle.draw();  // drawing red color! 🔺
-console.log(triangle.getArea());  // 200
-
+triangle.draw(); // drawing red color! 🔺
+console.log(triangle.getArea()); // 200
 
 // 6. Class checking: instanceOf
-console.log(rectangle instanceof Rectangle);  // true
-console.log(triangle instanceof Rectangle);   // false
-console.log(triangle instanceof Triangle);    // true
-console.log(triangle instanceof Shape);       // true
-console.log(triangle instanceof Object);      // true
-console.log(triangle.toString());             // Triangle: color: red
+console.log(rectangle instanceof Rectangle); // true
+console.log(triangle instanceof Rectangle); // false
+console.log(triangle instanceof Triangle); // true
+console.log(triangle instanceof Shape); // true
+console.log(triangle instanceof Object); // true
+console.log(triangle.toString()); // Triangle: color: red
 
 let obj = { value: 5 };
 function change(value) {
