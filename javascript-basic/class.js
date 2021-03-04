@@ -46,8 +46,8 @@ class User {
   }
 }
 
-// age를 실수로 -1 -> 객체지향적인 개념으로 봤을때 말이 안됨
-// 방어적인 자세로 만들 수 있도록 해주는 것이 getter와 setter
+// age를 실수로 -1 >> 객체지향적인 개념으로 봤을때 말이 안됨!!
+// 그래서 방어적인 자세로 만들 수 있도록 해주는 것이 getter와 setter
 const user1 = new User('Kim', 'Buhee', -1);
 console.log(user1.age);
 
