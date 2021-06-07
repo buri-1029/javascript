@@ -1,4 +1,6 @@
 ## JavaScript 
 
-#### JavaScript-basic(by dream-ellie)
+#### JavaScript-basic (by dream-ellie)
+
+#### VanillaJS
 
