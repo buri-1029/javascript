@@ -2,5 +2,5 @@
 
 #### JavaScript-basic (by dream-ellie)
 
-#### VanillaJS
+#### VanillaJS (by nomadcoder)
 
